@@ -6,6 +6,8 @@ require 'support/uploader_helpers'
 
 require 'fakeredis/rspec'
 require 'timecop'
+require 'factory_bot'
+require 'faker'
 require 'byebug' # REVIEW leave this in?
 
 RSpec.configure do |config|
@@ -25,4 +27,10 @@ RSpec.configure do |config|
   config.expose_dsl_globally = true
 
   config.include(UploaderHelpers, uploader_helpers: true)
+
+  config.include FactoryBot::Syntax::Methods
+
+  config.before(:suite) do
+    FactoryBot.find_definitions
+  end
 end

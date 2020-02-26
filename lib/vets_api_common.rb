@@ -15,9 +15,12 @@ require 'common/virus_scan'
 require 'common/file_helpers'
 require 'common/event_rate_limiter'
 require 'common/hash_helpers'
-require 'common/exceptions/serializable_error'
+require 'common/exceptions'
 
 # REVIEW this isn't gem-ready, but some stuff in here needs it
 require 'sentry_logging'
 
 # TODO review specs to not require files under test
+
+#set up translation files for exceptions
+I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]

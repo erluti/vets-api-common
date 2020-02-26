@@ -71,6 +71,7 @@ describe Common::EventRateLimiter do
 
     describe '.increment' do
       it 'increments both threshold and count', :aggregate_failures do
+        # byebug
         expect(subject.instance_variable_get(:@redis).get(:threshold).to_i).to eq(0)
         expect(subject.instance_variable_get(:@redis).get(:count).to_i).to eq(0)
         subject.increment

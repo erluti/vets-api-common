@@ -34,5 +34,11 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'dry-types', '~> 1.2.2'
   spec.add_runtime_dependency 'dry-struct', '~> 1.2.0'
   spec.add_runtime_dependency 'mini_magick', '~> 4.10.1'
+  spec.add_runtime_dependency 'redis', '~> 3.3.5'
+  spec.add_runtime_dependency 'redis-namespace', '~> 1.7.0'
   # TODO add more dependencies
+
+  spec.add_development_dependency 'timecop', '~> 0.9.1'
+  spec.add_development_dependency 'fakeredis', '~> 0.7.0'
+  spec.add_development_dependency 'byebug'
 end

@@ -10,6 +10,7 @@ module Common
   module CacheAside
     extend ActiveSupport::Concern
 
+    # REVIEW this is a reference to Rails
     REDIS_CONFIG = Rails.application.config_for(:redis).freeze
 
     included do

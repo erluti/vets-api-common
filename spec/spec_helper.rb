@@ -10,7 +10,7 @@ require 'timecop'
 require 'factory_bot'
 require 'faker'
 require 'vcr'
-require 'webmock'
+require 'webmock/rspec'
 require 'byebug' # REVIEW leave this in?
 
 # REVIEW breaker setup needs to be handled somehow

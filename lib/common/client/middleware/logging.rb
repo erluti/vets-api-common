@@ -13,6 +13,7 @@ module Common
           request_body = Base64.encode64(env.body) if env.body
 
           @app.call(env).on_complete do |response_env|
+            # TODO PersonalInformationLog is a vets-api ApplicationRecord, this needs to be handled through some sort of external setup
             PersonalInformationLog.create(
               error_class: @type_key, # TODO: error_class is probably worth renaming
               data: {

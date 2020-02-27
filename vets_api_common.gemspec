@@ -41,6 +41,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'statsd-instrument', '~> 2.6.0'
   spec.add_runtime_dependency 'breakers', '~> 0.3.0'
   spec.add_runtime_dependency 'httpclient', '~> 2.8.3'
+  spec.add_runtime_dependency 'sentry-raven', '2.9.0'
+  spec.add_runtime_dependency 'webrick', '1.6.0'
   # TODO add more dependencies
 
   spec.add_development_dependency 'timecop', '~> 0.9.1'

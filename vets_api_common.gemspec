@@ -38,12 +38,15 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'redis-namespace', '~> 1.7.0'
   spec.add_runtime_dependency 'oj', '~> 3.9.0'
   spec.add_runtime_dependency 'vcr', '~> 5.1.0'
-  # spec.add_runtime_dependency 'statsd-instrument', '~> 2.6.0'
+  spec.add_runtime_dependency 'statsd-instrument', '~> 2.6.0'
+  spec.add_runtime_dependency 'breakers', '~> 0.3.0'
+  spec.add_runtime_dependency 'httpclient', '~> 2.8.3'
   # TODO add more dependencies
 
   spec.add_development_dependency 'timecop', '~> 0.9.1'
   spec.add_development_dependency 'fakeredis', '~> 0.7.0'
   spec.add_development_dependency 'factory_bot', '~> 5.1.1'
   spec.add_development_dependency 'faker', '~> 2.10.2'
+  spec.add_development_dependency 'webmock', '~> 3.8.2'
   spec.add_development_dependency 'byebug'
 end

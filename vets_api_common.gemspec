@@ -37,6 +37,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'redis', '~> 3.3.5'
   spec.add_runtime_dependency 'redis-namespace', '~> 1.7.0'
   spec.add_runtime_dependency 'oj', '~> 3.9.0'
+  spec.add_runtime_dependency 'vcr', '~> 5.1.0'
+  # spec.add_runtime_dependency 'statsd-instrument', '~> 2.6.0'
   # TODO add more dependencies
 
   spec.add_development_dependency 'timecop', '~> 0.9.1'

@@ -3,11 +3,13 @@ require "vets_api_common"
 
 require 'active_support'
 require 'support/uploader_helpers'
+require 'support/default_configuration_helper'
 
 require 'fakeredis/rspec'
 require 'timecop'
 require 'factory_bot'
 require 'faker'
+require 'vcr'
 require 'byebug' # REVIEW leave this in?
 
 RSpec.configure do |config|

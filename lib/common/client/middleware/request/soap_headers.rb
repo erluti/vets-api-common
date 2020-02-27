@@ -16,4 +16,5 @@ module Common
   end
 end
 
+# REVIEW using middleware
 Faraday::Request.register_middleware soap_headers: Common::Client::Middleware::Request::SOAPHeaders

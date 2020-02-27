@@ -29,4 +29,5 @@ module Common
   end
 end
 
+# REVIEW using middleware
 Faraday::Middleware.register_middleware logging: Common::Client::Middleware::Logging

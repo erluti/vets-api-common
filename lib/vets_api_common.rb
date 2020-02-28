@@ -35,6 +35,8 @@ require 'common/models/message'
 # TODO review specs to not require files under test
 # TODO review requires so they are called logically
 
+byebug # TODO remove this, just trying to see when this is loaded by vets-api
+
 #set up translation files for exceptions
 I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
 

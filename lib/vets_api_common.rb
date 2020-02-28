@@ -30,6 +30,7 @@ require 'common/client/middleware/logging'
 require 'common/client/middleware/response/soap_parser'
 require 'common/client/middleware/request/remove_cookies'
 require 'common/client/middleware/request/immutable_headers'
+require 'common/models/message'
 
 # TODO review specs to not require files under test
 # TODO review requires so they are called logically

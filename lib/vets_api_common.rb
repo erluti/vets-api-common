@@ -35,8 +35,6 @@ require 'common/models/message'
 # TODO review specs to not require files under test
 # TODO review requires so they are called logically
 
-byebug # TODO remove this, just trying to see when this is loaded by vets-api
-
 #set up translation files for exceptions
 I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
 
@@ -50,7 +48,9 @@ require 'stats_d_metric'
 require 'sentry_logging'
 
 # REVIEW should these be here or in rails?  Add "initializer" class to be called from Rails?
-Faraday::Middleware.register_middleware remove_cookies: Common::Client::Middleware::Request::RemoveCookies
-Faraday::Middleware.register_middleware immutable_headers: Common::Client::Middleware::Request::ImmutableHeaders
+
+# TODO need to be uncommented for local specs, but removing to see if it helps inclusion in vets-api
+# Faraday::Middleware.register_middleware remove_cookies: Common::Client::Middleware::Request::RemoveCookies
+# Faraday::Middleware.register_middleware immutable_headers: Common::Client::Middleware::Request::ImmutableHeaders
 
 # Faraday::Response.register_middleware hca_soap_parser: HCA::SOAPParser

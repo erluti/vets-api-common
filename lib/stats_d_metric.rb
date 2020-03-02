@@ -16,6 +16,7 @@ require 'common/models/redis_store'
 # (e.g. StatsD.increment("<NAME FROM REDIS>", 0)). For metrics that are not refreshed,
 # they expire from Redis and will not be initialized to 0 on future `vets-api` initializations.
 class StatsDMetric < Common::RedisStore
+  byebug # add a byebug to see if REDIS_CONFIG is what we expect
   redis_store REDIS_CONFIG['statsd_roster']['namespace']
   redis_ttl REDIS_CONFIG['statsd_roster']['each_ttl']
   redis_key :key

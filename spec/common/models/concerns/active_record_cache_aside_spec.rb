@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 require 'common/models/concerns/active_record_cache_aside'
 
 describe Common::ActiveRecordCacheAside do
@@ -16,7 +16,7 @@ describe Common::ActiveRecordCacheAside do
       end
 
       it 'retrieves the db record from the cache' do
-        expect(Marshal).to receive(:load).with(serialized_record)
+        expect(Marshal).to receive(:load).with(serialized_record) { Account.new(idme_uuid: user.uuid) }
 
         Account.cache_or_create_by! user
       end

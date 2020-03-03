@@ -38,10 +38,10 @@ require 'common/models/message'
 #set up translation files for exceptions
 I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
 
-# REVIEW does this config need to be set externally
-REDIS_CONFIG = YAML.load(File.read('config/redis.yml'))['test'] # REVIEW use environment here
+# REVIEW does this config need to be set externally #move to test?
+# REDIS_CONFIG = YAML.load(File.read('config/redis.yml'))['test'] # REVIEW use environment here
 # set the current global instance of Redis based on environment specific config
-Redis.current = Redis.new(REDIS_CONFIG['redis'])
+# Redis.current = Redis.new(REDIS_CONFIG['redis'])
 
 require 'stats_d_metric'
 # REVIEW this isn't gem-ready, but some stuff in here needs it

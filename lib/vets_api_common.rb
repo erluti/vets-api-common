@@ -17,6 +17,8 @@ require 'sentry-raven'
 require 'webrick'
 require 'ox'
 
+require 'fakeredis/rspec' # attempting to always be in "fake" mode
+
 require 'common/convert_to_pdf'
 require 'common/virus_scan'
 require 'common/file_helpers'

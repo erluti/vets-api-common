@@ -39,9 +39,9 @@ require 'common/models/message'
 I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
 
 # REVIEW does this config need to be set externally #move to test?
-# REDIS_CONFIG = YAML.load(File.read('config/redis.yml'))['test'] # REVIEW use environment here
+REDIS_CONFIG = YAML.load(File.read('config/redis.yml'))['test'] # REVIEW use environment here
 # set the current global instance of Redis based on environment specific config
-# Redis.current = Redis.new(REDIS_CONFIG['redis'])
+Redis.current = Redis.new(REDIS_CONFIG['redis'])
 
 require 'stats_d_metric'
 # REVIEW this isn't gem-ready, but some stuff in here needs it
@@ -50,7 +50,7 @@ require 'sentry_logging'
 # REVIEW should these be here or in rails?  Add "initializer" class to be called from Rails?
 
 # TODO need to be uncommented for local specs, but removing to see if it helps inclusion in vets-api
-# Faraday::Middleware.register_middleware remove_cookies: Common::Client::Middleware::Request::RemoveCookies
-# Faraday::Middleware.register_middleware immutable_headers: Common::Client::Middleware::Request::ImmutableHeaders
+Faraday::Middleware.register_middleware remove_cookies: Common::Client::Middleware::Request::RemoveCookies
+Faraday::Middleware.register_middleware immutable_headers: Common::Client::Middleware::Request::ImmutableHeaders
 
 # Faraday::Response.register_middleware hca_soap_parser: HCA::SOAPParser

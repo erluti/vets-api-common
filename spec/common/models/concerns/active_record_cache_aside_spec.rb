@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'spec_helper'
 require 'common/models/concerns/active_record_cache_aside'
 
 describe Common::ActiveRecordCacheAside do
